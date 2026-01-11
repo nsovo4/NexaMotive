@@ -8,7 +8,7 @@ We specialize in transforming ideas into reliable web and software solutions wit
 ⚡ Performance & SEO focused
 
 🌐 Live Website
-🔗 [https://your-domain-name.com](https://nsovo4.github.io/NexaMotive/)
+🔗 [https://NexaMotive.co.za](https://nsovo4.github.io/NexaMotive/)
 
 🧠 What We Do
 NexaMotive provides end-to-end digital solutions, including:
@@ -52,7 +52,7 @@ GitHub Pages
 📞 Contact NexaMotive
 
 💬 WhatsApp/Phone +27 70 714 3294
-🌍 Website: [https://your-domain-name.com](https://nsovo4.github.io/NexaMotive/)
+🌍 Website: [https://NexaMotive.co.za](https://nsovo4.github.io/NexaMotive/)
 
 🧑‍💻 Author
 
