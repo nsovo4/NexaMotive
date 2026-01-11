@@ -112,6 +112,39 @@ nav a:hover::after {
   margin-bottom: 20px;
 }
 
+.hero-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.hero-title span {
+  opacity: 0;
+  transform: translateY(30px);
+  filter: blur(4px);
+  animation: revealWord 0.8s ease forwards;
+}
+
+/* Stagger animation */
+.hero-title span:nth-child(1) { animation-delay: 0.1s; }
+.hero-title span:nth-child(2) { animation-delay: 0.2s; }
+.hero-title span:nth-child(3) { animation-delay: 0.3s; }
+.hero-title span:nth-child(4) { animation-delay: 0.4s; }
+.hero-title span:nth-child(5) { animation-delay: 0.5s; }
+.hero-title span:nth-child(6) { animation-delay: 0.6s; }
+
+@keyframes revealWord {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+
 .section {
   padding: 80px 0;
 }
@@ -313,4 +346,64 @@ footer {
   .nav-menu a:last-child {
     border-bottom: none;
   }
+
+  .hero-title {
+    font-size: 2rem;
+  }
+}
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 58px;
+  height: 58px;
+  background: #25D366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 15px 30px rgba(37, 211, 102, 0.4);
+  z-index: 999;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: whatsapp-pulse 2.5s infinite;
+}
+
+.whatsapp-float:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 25px 50px rgba(37, 211, 102, 0.6);
+}
+
+/* Pulse effect */
+@keyframes whatsapp-pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6);
+  }
+  70% {
+    box-shadow: 0 0 0 18px rgba(37, 211, 102, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+  }
+}
+
+/* Tooltip */
+.whatsapp-tooltip {
+  position: absolute;
+  right: 70px;
+  background: #0F172A;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  white-space: nowrap;
+  opacity: 0;
+  transform: translateY(5px);
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+.whatsapp-float:hover .whatsapp-tooltip {
+  opacity: 1;
+  transform: translateY(0);
 }
