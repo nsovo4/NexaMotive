@@ -15,7 +15,7 @@ body {
 }
 
 .container {
-  max-width: 1100px;
+  max-width: 1300px;
   margin: auto;
   padding: 0 20px;
 }
@@ -267,20 +267,62 @@ nav a:hover::after {
   box-shadow: 0 20px 40px rgba(0,0,0,0.08);
 }
 
-form {
+/* Contact Form */
+.contact-form {
   max-width: 500px;
   margin: auto;
-  display: flex;
-  flex-direction: column;
 }
 
-form input,
-form textarea {
-  padding: 12px;
-  margin-bottom: 15px;
-  border-radius: 6px;
-  border: 1px solid #d1d5db;
+/* Form Group */
+.form-group {
+  position: relative;
+  margin-bottom: 3.4rem;
 }
+
+/* Inputs & Textarea */
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 14px 12px;
+  font-size: 1rem;
+  border: 1.5px solid #ccc;
+  border-radius: 8px;
+  background: transparent;
+  outline: none;
+  transition: border-color 0.3s ease;
+  resize: none;
+}
+
+/* Label (acts as placeholder) */
+.form-group label {
+  position: absolute;
+  left: 12px;
+  top: 40%;
+  transform: translateY(-20%);
+  color: #777;
+  font-size: 0.95rem;
+  pointer-events: none;
+  background: #fff;
+  padding: 0 6px;
+  transition: all 0.3s ease;
+}
+
+/* Floating effect */
+.form-group input:focus + label,
+.form-group input:valid + label,
+.form-group textarea:focus + label,
+.form-group textarea:valid + label {
+  top: -8px;
+  font-size: 0.75rem;
+  color: #2563eb; /* Accent blue */
+}
+
+/* Focus border */
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #2563eb;
+}
+
 
 .btn {
   padding: 10px 18px;
